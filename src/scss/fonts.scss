@@ -1,0 +1,14 @@
+/*подключаем шрифты*/
+@font-face{
+  font-family: "TT Lakes";
+  src: url("../fonts/tt.woff") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes Bold';
+  src: url("../fonts/ttbold.woff") format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
