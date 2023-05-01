@@ -18,7 +18,6 @@
 .services__actions {
   display: none;
 
-
   @media (min-width: 768px) {
       display: none;
   }
@@ -40,7 +39,7 @@
   justify-content: space-between;
   align-items: center;
   @media (min-width: 1120px) {
-    height: 130px;
+    //height: 130px;
   }
 }
 
@@ -80,6 +79,7 @@
     margin-bottom: 0;
     li {
       margin-right: 5px;
+      height: 15px;
     }
   }
 }
@@ -111,7 +111,7 @@
 
 }
 
-.actions-check {
+.actions-search {
   margin-left: 32px;
   margin-right: 28px;
 }

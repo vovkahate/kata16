@@ -208,11 +208,9 @@ button {
 
 .swiper {
     /*background-color: #ae78dc;*/
-
     background: rgb(249,245,245);
     background: linear-gradient(90deg, rgba(249,245,245,0) 89%, rgba(255,255,255,0.5326331216080182) 99%);
     position: relative;
-
 }
 
 .swiper:before {
@@ -234,9 +232,7 @@ button {
 }
 
 .swiper-slide{
-
     margin-left: -35px;
-
 }
 
 .card {

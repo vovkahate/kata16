@@ -10,8 +10,8 @@
                          "title"
                          "services-menu"
                          "content"
-                         "s1h"
-                         "s1";
+                         "repair-brands"
+                         ;
     @media (min-width: $screen-md) {
           min-width: 768px;
           max-width: 1120px;
@@ -20,8 +20,8 @@
                                "title"
                                "services-menu"
                                "content"
-                               "s1h"
-                               "s1";
+                               "repair-brands"
+                               ;
 
     }
     @media (min-width: $screen-lg) {
@@ -31,16 +31,15 @@
         min-width: 1120px;
         max-width: 1440px;
         grid-template-columns: 320px 1fr;
-        grid-template-rows:[title] 130px [services-menu] 90px;
+        grid-template-rows:[title] 110px [services-menu] 90px [content] 330px auto;
+
         grid-template-areas:   "aside title"
                                "aside services-menu"
                                "aside content"
-                               "aside s1h"
-                               "aside s1";
-
-
+                               "aside repair-brands";
     }
 }
+
 
 body {
   background-color: $body-bg;
@@ -81,8 +80,8 @@ a:visited {
 .slider1_h {
     grid-area: s1h;
 }
-.slider1 {
-    grid-area: s1;
+.repair-brands{
+    grid-area: repair-brands;
 }
 
 button {
