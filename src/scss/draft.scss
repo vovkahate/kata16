@@ -65,7 +65,7 @@ a:visited {
 }
 
 /*слайдер со списком ссылок внутри, уезжающий за экран*/
-.main__list{
+.services__list{
     display: flex;
     color: #7E7E82;
     font-size: 16px;
@@ -77,17 +77,17 @@ a:visited {
     margin: 0 0 24px 16px;
     padding: 0;
 }
-.main__list::-webkit-scrollbar {
+.services__list::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
 }
-.main__link {
+.services__list-link {
     display: block;
     padding: 8px 15px;
     border: 2px solid transparent;
     border-radius: 6px;
 }
 
-.main__link:hover, .main__link:active, .main__link:focus{
+.services__list-link:hover, .services__list-link:active, .services__list-link:focus{
     border: 2px solid #B8FFEC;
     border-radius: 6px;
     background-color: #FFFFFF;
@@ -96,7 +96,7 @@ a:visited {
 /*.... конец слайдера*/
 
 /*гланый наш заголовок*/
-.main__title {
+.services__title {
     font-family: "TT Lakes Bold", "Tahoma", sans-serif;
     font-size: 28px;
     line-height: 40px;
@@ -113,11 +113,11 @@ a:visited {
     border-radius: 2px;
     position: absolute;
     right: 117px;
-    top: 6px
+    top: 6px;
 }
 
 /*маркер перед заголовоком*/
-.main__title::before{
+.services__title::before{
     content: "";
     width: 4px;
     height: 40px;
@@ -143,7 +143,7 @@ a:visited {
 
 .main__text--hide1,
 .main__text--hide2,
-.main__actions {
+.services__actions {
     display: none;
 }
 
@@ -361,7 +361,7 @@ button {
         border-radius: 6px;
     }
 
-    .main__list {
+    .services__list {
         margin: 0 0 24px 24px;
     }
 
@@ -383,7 +383,7 @@ button {
         padding-right: 26px;
     }
 
-    .main__title {
+    .services__title {
         margin: 24px;
     }
 
@@ -545,7 +545,7 @@ button {
         border-radius: 6px;
     }
 
-    .main__list {
+    .services__list {
         margin: 0 0 24px 24px;
     }
 
@@ -553,7 +553,7 @@ button {
         padding: 0 24px;
     }
 
-    .main__title {
+    .services__title {
         margin: 24px;
     }
 
@@ -601,25 +601,25 @@ button {
         display: none;
     }
 
-    .main__actions {
+    .services__actions {
         display: flex;
         list-style-type: none;
         margin-top: 42px;
         margin-left: auto;
 
     }
-    .main__actions li{
+    .services__actions li{
         padding-left: 32px;
     }
-    .main__actions li button {
+    .services__actions li button {
         display: flex;
         align-items: center;
         background-color: #F8F8F8;
     }
-    .main__actions li button img{
+    .services__actions li button img{
         padding-left: 8px;
     }
-    .main__actions li {
+    .services__actions li {
         height: 40px;
     }
 
@@ -633,11 +633,11 @@ button {
         line-height: 20px;
     }
 
-    .main__list {
+    .services__list {
         margin: 0 0 0 24px;
     }
 
-    .main__title::before {
+    .services__title::before {
         content: "";
         width: 4px;
         height: 40px;
@@ -647,7 +647,7 @@ button {
         left: -1px;
     }
 
-    .main__title-wrapper {
+    .services-wrapper {
         display: flex;
         position: relative;
         margin-right: 32px;
@@ -656,7 +656,7 @@ button {
     .actions-repair::before {
         display: none;
     }
-    .main__title {
+    .services__title {
         margin: 42px 0 8px 32px;
     }
     .about__text, .about__text--full{
@@ -675,26 +675,26 @@ button {
         color: #1B1C21;
 
     }
-    .main__list{
+    .services__list{
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
     }
-    .list__item {
+    .services__list-item {
         margin-right: 20px;
         margin-bottom: 14px;
     }
-    .list__item:nth-child(1) {
+    .services__list-item:nth-child(1) {
         order: -4;
     }
-    .list__item:nth-child(2) {
+    .services__list-item:nth-child(2) {
         display: none;
     }
-    li.list__item:nth-child(3)  {
+    li.services__list-item:nth-child(3)  {
         order: -3;
 
     }
-    .list__item:nth-child(4) {
+    .services__list-item:nth-child(4) {
         order: -3;
     }
     .about__article p {
@@ -720,7 +720,7 @@ button {
     .main__about {
         max-width: 1120px;
     }
-    .main__list {
+    .services__list {
         flex-wrap: nowrap;
 
     }
@@ -742,7 +742,7 @@ button {
         color: #7E7E82;
         background-color: transparent;
     }
-    .list__item:last-child {
+    .services__list-item:last-child {
         display: none;
     }
 
@@ -805,7 +805,6 @@ button {
 }
 
 .burger-menu__search-btn {
-
     margin-left: auto;
 }
 .burger-menu__logo {

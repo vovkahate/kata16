@@ -10,10 +10,28 @@
 
 <div class="wrapper">
 
-    <div class="header">
+    <header class="header">
         <button class="header__burger"><img src="img/burger.svg"></button>
         <a class="burger-menu__logo" href="#"><img src="img/Group.svg"></a>
-    </div>
+
+        <ul class="header__actions">
+            <li class="actions-container">
+                <button class="actions-call"><img src="img/call.svg" alt="Написать"></button>
+            </li>
+            <li class="actions-container">
+                <button class="actions-chat"><img src="img/chat.svg" alt="Написать"></button>
+            </li>
+            <li class="actions-container">
+                <button class="actions-profile"><img src="img/profile.svg" alt="Профиль"></button>
+            </li>
+            <li class="actions-container">
+                <button class="actions-repair"><img src="img/repair.svg" alt="Починить"></button>
+            </li>
+            <li class="actions-container">
+                <button class="actions-check"><img src="img/checkstatus.svg" alt="Найти"></button>
+            </li>
+        </ul>
+    </header>
 
     <aside class="burger-menu">
         <div class="burger-menu__wrapper">
@@ -23,8 +41,8 @@
                 <button class="burger-menu__search-btn"><img src="img/search.svg"></button>
             </div>
             <ul class="burger-menu__list">
-                <li class="burger-menu__list__item--active"><a class="menu__link" href="#">Ремонт техники</a></li>
-                <li class="burger-menu__list__item"><a class="menu__link" href="#">Услуги и сервисы</a></li>
+                <li class="burger-menu__list__item"><a class="menu__link" href="#">Ремонт техники</a></li>
+                <li class="burger-menu__list__item--active"><a class="menu__link" href="#">Услуги и сервисы</a></li>
                 <li class="burger-menu__list__item"><a class="menu__link" href="#">Корпоротивным клиентам</a></li>
                 <li class="burger-menu__list__item"><a class="menu__link" href="#">Продавцам техники</a></li>
                 <li class="burger-menu__list__item"><a class="menu__link" href="#">Партнерам</a></li>
@@ -35,11 +53,11 @@
             <div class="burger-menu__footer">
 
                 <ul class="burger-menu__actions-list">
-                    <li class="burger-menu__action"><button class="actions-call"><img src="assets/img/call.svg" alt="Позвонить">
+                    <li class="burger-menu__action"><button class="actions-call"><img src="img/call.svg" alt="Позвонить">
                     </button></li>
-                    <li class="burger-menu__action"><button class="actions-message"><img src="assets/img/chat.svg" alt="Написать">
+                    <li class="burger-menu__action"><button class="actions-message"><img src="img/chat.svg" alt="Написать">
                     </button></li>
-                    <li class="burger-menu__action"><button class="actions-profile"><img src="assets/img/profile.svg" alt="Профиль">
+                    <li class="burger-menu__action"><button class="actions-profile"><img src="img/profile.svg" alt="Профиль">
                     </button></li>
                 </ul>
 
@@ -56,23 +74,39 @@
         </div>
     </aside>
 
-    <h2 class="title-uslugi">Услуги</h2>
+    <div class="services-wrapper">
+        <h1 class="services__title">Услуги и сервисы</h1>
+        <ul class="services__actions">
+            <li>
+                <button class="actions-repair">Оставить Заявку<img src="img/repair.svg" alt="Починить">
+                </button>
+            </li>
+            <li>
+                <button class="actions-check">Статус ремонта<img src="img/checkstatus.svg" alt="Найти">
+                </button>
+            </li>
+        </ul>
+    </div>
 
-    <ul class="main__list">
-        <li class="list__item"><a class="main__link" href="#" autofocus>Ремонтируемые устройства</a></li>
-        <li class="list__item"><a class="main__link" href="#">Дополнительные услуги</a></li>
-        <li class="list__item"><a class="main__link" href="#">Ремонтируемые бренды</a></li>
-        <li class="list__item"><a class="main__link" href="#">Цены на услуги</a></li>
-        <li class="list__item"><a class="main__link" href="#">Адреса сервисных центров</a></li>
-        <li class="list__item"><a class="main__link" href="#">Специальные цены</a></li>
-        <li class="list__item"><a class="main__link" href="#">Отзывы</a></li>
+    <ul class="services__list">
+        <li class="services__list-item"><a class="services__list-link--active" href="#">Ремонтируемые бренды</a></li>
+        <li class="services__list-item"><a class="services__list-link" href="#">Ремонтируемые устройства</a></li>
+        <li class="services__list-item"><a class="services__list-link" href="#">Цены на услуги</a></li>
+        <li class="services__list-item"><a class="services__list-link" href="#">Адреса сервисных центров</a></li>
+        <li class="services__list-item"><a class="services__list-link" href="#">Специальные цены</a></li>
+        <li class="services__list-item"><a class="services__list-link" href="#">Отзывы</a></li>
     </ul>
 
-    <div class="content">
-        <p class="content-text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+    <section class="content">
+        <div class="content-wrapper">
+            <p class="content__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+            <p class="content__text-expand">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера<span class="hidden-text">, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span></p>
+        <button class="btn expand"><img src="img/expand.svg">Читать далее</button>
+        </div>
+        <img class="main__img" src="img/picture360.png">
+        <img class="main__img--max" src="img/picture520.png">
+    </section>
 
-        <div></div>
-    </div>
     <h3 class="slider1_h">ремонт слайдеров</h3>
     <div class="slider1"></div>
 </div>

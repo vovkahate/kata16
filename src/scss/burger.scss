@@ -1,0 +1,154 @@
+.burger-menu {
+  display: none;
+  background-color: $header-bg;
+  @media (min-width: 768px) {
+    display: none;
+  }
+  @media (min-width: 1120px) {
+    display: unset;
+    grid-area: aside;
+    margin: 0;
+    padding: 0;
+
+  }
+}
+
+.burger-menu__wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 86%;
+  margin: 20px auto;
+}
+
+.burger-menu__header {
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.burger-menu__burger-btn {
+  display: none;
+}
+.burger-menu__logo{
+
+}
+.burger-menu__search-btn {
+
+}
+
+.burger-menu__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-top: 35px;
+  padding: 0;
+  list-style: none;
+  font-family: "TT Lakes", "Tahoma", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  position: relative;
+}
+
+.burger-menu__actions-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.burger-menu__list__item {
+  position: relative;
+  margin-bottom: 32px;
+  transition: 1s ease;
+}
+
+.burger-menu__list__item--active {
+  position: relative;
+  margin-bottom: 32px;
+  transition: 1s ease;
+  color: #7E7E82;
+}
+
+.burger-menu__list__item:hover:not(.burger-menu__list__item--active) {
+  transform: scale(1.05) translateX(5px);
+  opacity: 0.8;
+  transition: all;
+  transition-duration: 1s;
+}
+
+.burger-menu__list__item--active::before {
+  content: "";
+  width: 4px;
+  height: 40px;
+  background-color: #41F6D7;
+  border-radius: 5px;
+  position: absolute;
+  left: -23px;
+  top: -8px;
+
+}
+
+.burger-menu__footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: auto;
+
+  min-height: 200px;
+}
+
+.burger-menu__action {
+  margin-right: 16px;
+  padding: 0;
+}
+
+.burger-menu__action button{
+  padding: 0;
+}
+
+.burger-menu__action button:hover{
+  padding: 0;
+  transform: scale(1.08);
+  transition-duration: 1s;
+}
+
+.burger-menu__email {
+  font-family: "TT Lakes", "Tahoma", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  margin-top: 16px;
+}
+.burger-menu__phone{
+  font-family: "TT Lakes Bold", "Tahoma", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+input {
+  display: none;
+}
+.burger-menu__language {
+  margin-top: auto;
+}
+
+.burger-menu__language label:nth-of-type(1) {
+  color:grey;
+}
+
+.burger-menu__language label:hover:not(:nth-of-type(1)) {
+  transform: scale(1.1);
+  color: #41F6D7;
+  cursor: pointer;
+}
+
+.burger-menu__header button:hover {
+  transform: scale(1.1);
+  transition: all;
+  transition-duration: 1s;
+}

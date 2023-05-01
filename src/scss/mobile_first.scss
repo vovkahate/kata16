@@ -1,0 +1,103 @@
+
+.wrapper {
+    font-family: $font-family;
+    min-width: 320px;
+    max-width: 768px;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    grid-template-areas: "header"
+                         "title"
+                         "services-menu"
+                         "content"
+                         "s1h"
+                         "s1";
+    @media (min-width: $screen-md) {
+          min-width: 768px;
+          max-width: 1120px;
+          grid-template-columns: 1fr;
+          grid-template-areas: "header"
+                               "title"
+                               "services-menu"
+                               "content"
+                               "s1h"
+                               "s1";
+
+    }
+    @media (min-width: $screen-lg) {
+
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 1120px;
+        max-width: 1440px;
+        grid-template-columns: 320px 1fr;
+        grid-template-rows:[title] 130px [services-menu] 90px;
+        grid-template-areas:   "aside title"
+                               "aside services-menu"
+                               "aside content"
+                               "aside s1h"
+                               "aside s1";
+
+
+    }
+}
+
+body {
+  background-color: $body-bg;
+  p {
+    font-family: "TT Lakes", "Tahoma", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1B1C21;
+    letter-spacing: 0.2px;
+    text-align: left;
+  }
+}
+
+a:link {
+  text-decoration: none;
+  color:inherit;
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.title-services {
+    grid-area: title;
+}
+.slider-menu {
+    grid-area: top-slider;
+}
+
+.services__list {
+    grid-area: services-menu;
+}
+
+.content {
+    grid-area: content;
+}
+.slider1_h {
+    grid-area: s1h;
+}
+.slider1 {
+    grid-area: s1;
+}
+
+button {
+  cursor: pointer;
+  font-family: "TT Lakes", "Tahoma", sans-serif;
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+
+
