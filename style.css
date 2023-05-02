@@ -1265,8 +1265,6 @@ input {
 .btn {
   display: flex;
   align-items: center;
-  margin-left: 24px;
-  margin-bottom: 16px;
   font-size: 16px;
 }
 
@@ -1311,6 +1309,16 @@ input {
   }
 }
 
+.btn-content {
+  margin-left: 24px;
+  margin-bottom: 16px;
+}
+@media (min-width: 1120px) {
+  .btn-content {
+    display: none;
+  }
+}
+
 .repair-brands__title {
   display: block;
   border-top: 1px solid #D9FFF5;
@@ -1351,6 +1359,7 @@ input {
     -moz-column-gap: 32px;
          column-gap: 32px;
     row-gap: 16px;
+    max-height: 160px;
   }
 }
 @media (min-width: 1120px) {
@@ -1363,6 +1372,18 @@ input {
     -moz-column-gap: 32px;
          column-gap: 32px;
     row-gap: 16px;
+    max-height: 160px;
+  }
+}
+
+@media (min-width: 768px) {
+  .height {
+    max-height: unset;
+  }
+}
+@media (min-width: 1120px) {
+  .height {
+    max-height: unset;
   }
 }
 
@@ -1382,6 +1403,9 @@ input {
   margin-top: 24px;
   margin-left: 0;
   display: none;
+  width: 150px;
+  height: 30px;
+  position: relative;
 }
 @media (min-width: 768px) {
   .btn-brands {
@@ -1394,6 +1418,26 @@ input {
     display: flex;
     align-items: center;
   }
+}
+
+.btn-brands:before {
+  content: "Показать всё";
+  position: absolute;
+  left: 30px;
+}
+
+.coll:before {
+  content: "Скрыть";
+  position: absolute;
+  left: 30px;
+}
+
+.result {
+  transition-duration: 1.2s;
+}
+
+.coll .result {
+  transform: rotate(-180deg);
 }
 
 .repair-brands__slider {
