@@ -1547,12 +1547,6 @@ input {
   align-self: flex-end;
 }
 
-.swiper-tech-pagination {
-  width: 25px;
-  height: 25px;
-  margin: -15px auto;
-}
-
 .btn-tech {
   margin-top: 24px;
   margin-left: 0;
@@ -1601,20 +1595,75 @@ input {
   }
 }
 
+.prices__slider {
+  padding: 25px;
+}
+
+.swiper-prices {
+  width: 300px;
+  height: 190px;
+}
+@media (min-width: 768px) {
+  .swiper-prices {
+    width: auto;
+    height: auto;
+  }
+}
+@media (min-width: 1120px) {
+  .swiper-prices {
+    width: auto;
+    height: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .swiper-prices .swiper-wrapper {
+    display: grid;
+    margin: 0;
+    grid-template-columns: repeat(auto-fit, minmax(210px, auto));
+    grid-auto-flow: row;
+    -moz-column-gap: 32px;
+         column-gap: 32px;
+    row-gap: 16px;
+  }
+}
+@media (min-width: 1120px) {
+  .swiper-prices .swiper-wrapper {
+    display: grid;
+    margin: 0;
+    padding-right: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(210px, auto));
+    grid-auto-flow: row;
+    -moz-column-gap: 32px;
+         column-gap: 32px;
+    row-gap: 16px;
+  }
+}
+
+.swiper-price-slide {
+  display: flex;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+  border: 1px solid #EAEAEA;
+  padding: 16px;
+  width: 200px;
+  height: 160px;
+}
+
 .wrapper {
   font-family: "TT Lakes";
   min-width: 300px;
   max-width: 768px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: "header" "title" "services-menu" "content" "repair-brands" "repair-tech";
+  grid-template-areas: "header" "title" "services-menu" "content" "repair-brands" "repair-tech" "prices-slider";
 }
 @media (min-width: 768px) {
   .wrapper {
     min-width: 768px;
     max-width: 1120px;
     grid-template-columns: 1fr;
-    grid-template-areas: "header" "title" "services-menu" "content" "repair-brands" "repair-tech";
+    grid-template-areas: "header" "title" "services-menu" "content" "repair-brands" "repair-tech" "prices-slider";
   }
 }
 @media (min-width: 1120px) {
@@ -1625,7 +1674,7 @@ input {
     max-width: 1440px;
     grid-template-columns: 320px 1fr;
     grid-template-rows: [title] 110px [services-menu] 90px [content] 330px [repair-brands] auto [repair-tech] auto;
-    grid-template-areas: "aside title" "aside services-menu" "aside content" "aside repair-brands" "aside repair-tech";
+    grid-template-areas: "aside title" "aside services-menu" "aside content" "aside repair-brands" "aside repair-tech" "aside prices-slider";
   }
 }
 
@@ -1655,10 +1704,6 @@ a:visited {
   grid-area: title;
 }
 
-.slider-menu {
-  grid-area: top-slider;
-}
-
 .services__list {
   grid-area: services-menu;
 }
@@ -1673,6 +1718,10 @@ a:visited {
 
 .repair-tech {
   grid-area: repair-tech;
+}
+
+.services-prices {
+  grid-area: prices-slider;
 }
 
 button {
