@@ -1619,6 +1619,7 @@ input {
 
 .prices__slider {
   padding: 25px;
+  padding-bottom: 0;
 }
 
 .swiper-prices {
@@ -1869,20 +1870,202 @@ input {
   }
 }
 
+.prices__slider-hidden-title {
+  display: none;
+  list-style-type: none;
+  margin-top: 0;
+  color: #7E7E82;
+}
+@media (min-width: 768px) {
+  .prices__slider-hidden-title {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 16px;
+  }
+}
+@media (min-width: 1120px) {
+  .prices__slider-hidden-title {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 16px;
+  }
+}
+
+.hidden-title__services {
+  width: 260px;
+}
+
+.hidden-title__price {
+  width: 75px;
+}
+
+.hidden-title__timing {
+  width: 60px;
+}
+
+.hidden-title__positioning {
+  width: 150px;
+}
+
+.disclaimer {
+  grid-area: disclaimer;
+}
+
+.disclaimer__content.content__text {
+  display: inline-block;
+  margin-left: 16px;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .disclaimer__content.content__text {
+    margin-left: 24px;
+    margin-top: 24px;
+    width: 60%;
+  }
+}
+@media (min-width: 1120px) {
+  .disclaimer__content.content__text {
+    margin-left: 32px;
+    margin-top: 32px;
+    width: 40%;
+  }
+}
+
+.order {
+  grid-area: commercial-order;
+}
+
+.order__btn {
+  color: #1B1C21;
+  font-weight: bold;
+  font-size: 16px;
+  width: 210px;
+  text-align: left;
+  margin-left: 16px;
+  margin-top: 16px;
+}
+@media (min-width: 768px) {
+  .order__btn {
+    margin-left: 24px;
+    margin-top: 24px;
+    width: 325px;
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 1120px) {
+  .order__btn {
+    margin-left: 32px;
+    margin-top: 32px;
+    width: 325px;
+    display: flex;
+    align-items: center;
+  }
+}
+.order__btn img {
+  margin-left: 8px;
+}
+
+.footer {
+  grid-area: bottom;
+  border-top: 1px solid #D9FFF5;
+  margin-top: 40px;
+}
+@media (min-width: 768px) {
+  .footer {
+    margin-top: 47px;
+  }
+}
+@media (min-width: 1120px) {
+  .footer {
+    margin-top: 50px;
+  }
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .copyright {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1120px) {
+  .copyright {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footer__about {
+  color: #7E7E82;
+  flex-basis: 33%;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .footer__about {
+    text-align: left;
+    margin-left: 24px;
+  }
+}
+@media (min-width: 1120px) {
+  .footer__about {
+    text-align: left;
+    margin-left: 32px;
+  }
+}
+
+.footer__discalimer {
+  color: #7E7E82;
+  flex-basis: 33%;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .footer__discalimer {
+    text-align: center;
+  }
+}
+@media (min-width: 1120px) {
+  .footer__discalimer {
+    text-align: center;
+  }
+}
+
+.footer__oferta {
+  color: #7E7E82;
+  flex-basis: 33%;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .footer__oferta {
+    text-align: right;
+    margin-right: 24px;
+  }
+}
+@media (min-width: 1120px) {
+  .footer__oferta {
+    text-align: right;
+    margin-right: 32px;
+  }
+}
+
 .wrapper {
   font-family: "TT Lakes";
   min-width: 300px;
   max-width: 768px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: "header" "title" "services-menu" "content" "repair-brands" "repair-tech" "prices-slider";
+  grid-template-areas: "header" "title" "services-menu" "content" "repair-brands" "repair-tech" "prices-slider" "disclaimer" "commercial-order" "bottom";
 }
 @media (min-width: 768px) {
   .wrapper {
     min-width: 768px;
     max-width: 1120px;
     grid-template-columns: 1fr;
-    grid-template-areas: "header" "title" "services-menu" "content" "repair-brands" "repair-tech" "prices-slider";
+    grid-template-areas: "header" "title" "services-menu" "content" "repair-brands" "repair-tech" "prices-slider" "disclaimer" "commercial-order" "bottom";
   }
 }
 @media (min-width: 1120px) {
@@ -1893,7 +2076,7 @@ input {
     max-width: 1440px;
     grid-template-columns: 320px 1fr;
     grid-template-rows: [title] 110px [services-menu] 90px [content] 330px [repair-brands] auto [repair-tech] auto;
-    grid-template-areas: "aside title" "aside services-menu" "aside content" "aside repair-brands" "aside repair-tech" "aside prices-slider";
+    grid-template-areas: "aside title" "aside services-menu" "aside content" "aside repair-brands" "aside repair-tech" "aside prices-slider" "aside disclaimer" "aside commercial-order" "aside bottom";
   }
 }
 
