@@ -1344,11 +1344,32 @@ input {
 .btn-content {
   margin-left: 24px;
   margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  width: 150px;
+  height: 30px;
+  position: relative;
 }
 @media (min-width: 1120px) {
   .btn-content {
     display: none;
   }
+}
+
+.btn-content:before {
+  content: "Читать далее";
+  position: absolute;
+  left: 30px;
+}
+
+.full:before {
+  content: "Скрыть";
+  position: absolute;
+  left: 30px;
+}
+
+.full .result {
+  transform: rotate(-180deg);
 }
 
 .repair-brands__title {
@@ -1602,7 +1623,7 @@ input {
 
 .swiper-prices {
   width: 300px;
-  height: 190px;
+  height: 220px;
 }
 @media (min-width: 768px) {
   .swiper-prices {
@@ -1619,36 +1640,188 @@ input {
 
 @media (min-width: 768px) {
   .swiper-prices .swiper-wrapper {
-    display: grid;
-    margin: 0;
-    grid-template-columns: repeat(auto-fit, minmax(210px, auto));
-    grid-auto-flow: row;
-    -moz-column-gap: 32px;
-         column-gap: 32px;
-    row-gap: 16px;
+    display: flex;
+    flex-direction: column;
   }
 }
 @media (min-width: 1120px) {
   .swiper-prices .swiper-wrapper {
-    display: grid;
-    margin: 0;
-    padding-right: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(210px, auto));
-    grid-auto-flow: row;
-    -moz-column-gap: 32px;
-         column-gap: 32px;
-    row-gap: 16px;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .swiper-price-slide {
+  position: relative;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #FFFFFF;
   border-radius: 6px;
   border: 1px solid #EAEAEA;
   padding: 16px;
-  width: 200px;
+  width: 180px;
   height: 160px;
+}
+@media (min-width: 768px) {
+  .swiper-price-slide {
+    width: unset;
+    height: 50px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-radius: 0;
+    padding: 16px;
+  }
+}
+@media (min-width: 1120px) {
+  .swiper-price-slide {
+    width: unset;
+    height: 50px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+  }
+}
+
+.swiper-price-slide:not(:last-child):after {
+  position: absolute;
+  background-color: #EAEAEA;
+  width: 95%;
+  height: 1px;
+  bottom: 1px;
+}
+@media (min-width: 768px) {
+  .swiper-price-slide:not(:last-child):after {
+    content: "";
+    width: 96%;
+    left: 18px;
+  }
+}
+@media (min-width: 1120px) {
+  .swiper-price-slide:not(:last-child):after {
+    content: "";
+    width: 96%;
+    left: 18px;
+  }
+}
+
+.swiper-price-slide__service-option {
+  width: unset;
+}
+@media (min-width: 768px) {
+  .swiper-price-slide__service-option {
+    width: 300px;
+  }
+}
+@media (min-width: 1120px) {
+  .swiper-price-slide__service-option {
+    width: 300px;
+  }
+}
+
+.swiper-price-slide__price {
+  width: unset;
+}
+@media (min-width: 768px) {
+  .swiper-price-slide__price {
+    width: 110px;
+  }
+}
+@media (min-width: 1120px) {
+  .swiper-price-slide__price {
+    width: 110px;
+  }
+}
+
+.swiper-price-slide__timing {
+  width: unset;
+}
+@media (min-width: 768px) {
+  .swiper-price-slide__timing {
+    width: 110px;
+  }
+}
+@media (min-width: 1120px) {
+  .swiper-price-slide__timing {
+    width: 110px;
+  }
+}
+
+@media (min-width: 768px) {
+  .swiper-price-slide__btn {
+    width: 119px;
+  }
+}
+@media (min-width: 1120px) {
+  .swiper-price-slide__btn {
+    width: 119px;
+  }
+}
+
+.swiper-price-slide__btn {
+  border-radius: 16px;
+  height: 32px;
+  width: 100px;
+  font-size: 12px;
+  color: white;
+  background: #FF3E79;
+}
+
+.swiper-price-slide__service-title, .swiper-price-slide__price-title, .swiper-price-slide__timing-title {
+  margin: 0;
+  color: #7E7E82;
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  .swiper-price-slide__service-title, .swiper-price-slide__price-title, .swiper-price-slide__timing-title {
+    display: none;
+  }
+}
+@media (min-width: 1120px) {
+  .swiper-price-slide__service-title, .swiper-price-slide__price-title, .swiper-price-slide__timing-title {
+    display: none;
+  }
+}
+
+.swiper-price-slide__service-option, .swiper-price-slide__price, .swiper-price-slide__timing {
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .swiper-price-slide__service-option, .swiper-price-slide__price, .swiper-price-slide__timing {
+    margin: unset;
+  }
+}
+@media (min-width: 1120px) {
+  .swiper-price-slide__service-option, .swiper-price-slide__price, .swiper-price-slide__timing {
+    margin: unset;
+  }
+}
+
+.swiper-price-slide__btn {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+@media (min-width: 768px) {
+  .swiper-price-slide__btn {
+    position: unset;
+  }
+}
+@media (min-width: 1120px) {
+  .swiper-price-slide__btn {
+    position: unset;
+  }
+}
+
+.swiper-price-slide__price-title {
+  margin-top: 16px;
+}
+
+.swiper-price-slide__timing-title {
+  margin-top: 16px;
 }
 
 .wrapper {
