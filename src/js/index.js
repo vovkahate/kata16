@@ -138,8 +138,7 @@ btnContent.addEventListener('click', function (){
 document.addEventListener('keydown', function(e) {
     if( e.key === "Escape" ){ // код клавиши Escape, но можно использовать e.key
         // toggleMenu();
-        menuContainer.classList.remove('active');
-        body.classList.remove('blur');
+        toggleMenu();
     }
 });
 

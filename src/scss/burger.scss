@@ -73,14 +73,17 @@
   flex-direction: column;
   width: 86%;
   height: 98vh;
-  margin: 20px auto;
+  margin: 0px auto;
 }
 
 .burger-menu__header {
   display: flex;
-  height: 80px;
+  height: 88px;
   justify-content: space-between;
   align-items: center;
+  @media (min-width: 1120px) {
+    margin-top: 10px;
+  }
 }
 
 
@@ -213,3 +216,7 @@ input {
 }
 
 
+.burger-menu__logo {
+  margin-right: auto;
+  margin-left: 16px;
+}
