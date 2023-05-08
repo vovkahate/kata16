@@ -1,11 +1,43 @@
 .burger-menu {
-  display: none;
   background-color: $header-bg;
-  @media (min-width: 768px) {
-    display: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+  width: 100%;
+  position: fixed;
+  z-index: 20;
+
+  @media (min-width: 361px) {
+    background-color: $header-bg;
+    position: fixed;
+    width: 320px;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+    //overflow-y:scroll;
+    //overflow-x:hidden;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
   }
+
+  @media (min-width: 768px) {
+    background-color: $header-bg;
+    position: fixed;
+    width: 320px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
+  }
+
   @media (min-width: 1120px) {
     display: unset;
+    position: unset;
+    transform: translateX(0);
     grid-area: aside;
     margin: 0;
     padding: 0;
@@ -13,10 +45,34 @@
   }
 }
 
+//тут был боди перед блур
+.blur .burger-menu:after {
+
+  @media (min-width: 361px) {
+    content: "";
+    position: fixed;
+    z-index: -1;
+    left: 320px;
+    width: 100vw;
+    height: 100%;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.84);
+    box-shadow: inset 16px 0px 52px rgba(14, 24, 80, 0.4);
+  }
+}
+
+
+.burger-menu.active {
+  transform: translateX(0);
+}
+
+
+
 .burger-menu__wrapper{
   display: flex;
   flex-direction: column;
   width: 86%;
+  height: 98vh;
   margin: 20px auto;
 }
 
@@ -29,12 +85,10 @@
 
 
 .burger-menu__burger-btn {
-  display: none;
-}
-.burger-menu__logo{
 
-}
-.burger-menu__search-btn {
+  @media (min-width: 1120px) {
+    display: none;
+  }
 
 }
 
@@ -42,7 +96,8 @@
   display: flex;
   flex-direction: column;
   margin: 0;
-  margin-top: 35px;
+
+  //margin-top: 35px;
   padding: 0;
   list-style: none;
   font-family: "TT Lakes", "Tahoma", sans-serif;
@@ -50,6 +105,7 @@
   line-height: 24px;
   letter-spacing: -0.2px;
   position: relative;
+
 }
 
 .burger-menu__actions-list {
@@ -87,7 +143,6 @@
   position: absolute;
   left: -23px;
   top: -8px;
-
 }
 
 .burger-menu__footer {
@@ -96,7 +151,11 @@
   justify-content: flex-start;
   margin-top: auto;
 
-  min-height: 200px;
+  @media (min-width: 1120px) {
+    margin-top: auto;
+
+  }
+
 }
 
 .burger-menu__action {
@@ -152,3 +211,5 @@ input {
   transition: all;
   transition-duration: 1s;
 }
+
+

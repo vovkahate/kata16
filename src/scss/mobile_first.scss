@@ -4,24 +4,35 @@
     min-width: 320px;
     max-width: 768px;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns:1fr;
 
     grid-template-areas: "header"
                          "title"
                          "services-menu"
                          "content"
                          "repair-brands"
-                         ;
+                         "repair-tech"
+                         "prices-slider"
+                         "disclaimer"
+                         "commercial-order"
+                         "bottom";
+
+
     @media (min-width: $screen-md) {
           min-width: 768px;
           max-width: 1120px;
-          grid-template-columns: 1fr;
+          grid-template-columns:1fr;
           grid-template-areas: "header"
                                "title"
                                "services-menu"
                                "content"
                                "repair-brands"
-                               ;
+                               "repair-tech"
+                               "prices-slider"
+                               "disclaimer"
+                               "commercial-order"
+                               "bottom";
+
 
     }
     @media (min-width: $screen-lg) {
@@ -31,12 +42,17 @@
         min-width: 1120px;
         max-width: 1440px;
         grid-template-columns: 320px 1fr;
-        grid-template-rows:[title] 110px [services-menu] 90px [content] 330px auto;
+        grid-template-rows:[title] 110px [services-menu] 90px [content] 330px [repair-brands] auto [repair-tech] auto;
 
         grid-template-areas:   "aside title"
                                "aside services-menu"
                                "aside content"
-                               "aside repair-brands";
+                               "aside repair-brands"
+                               "aside repair-tech"
+                               "aside prices-slider"
+                               "aside disclaimer"
+                               "aside commercial-order"
+                               "aside bottom";
     }
 }
 
@@ -63,12 +79,10 @@ a:visited {
   color: inherit;
 }
 
-.title-services {
+.services-wrapper {
     grid-area: title;
 }
-.slider-menu {
-    grid-area: top-slider;
-}
+
 
 .services__list {
     grid-area: services-menu;
@@ -77,11 +91,17 @@ a:visited {
 .content {
     grid-area: content;
 }
-.slider1_h {
-    grid-area: s1h;
-}
+
 .repair-brands{
     grid-area: repair-brands;
+}
+
+.repair-tech {
+  grid-area: repair-tech;
+}
+
+.services-prices {
+  grid-area: prices-slider;
 }
 
 button {
@@ -98,5 +118,13 @@ ul {
 }
 
 
+.swiper-pagination-bullet {
+  @media (min-width: 768px) {
+    display: none;
+  }
+  @media (min-width: 1120px) {
+    display: none;
 
+  }
+}
 

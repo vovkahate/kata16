@@ -1,25 +1,10 @@
-.repair-brands__title {
-  display: block;
-  border-top: 1px solid #D9FFF5;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  text-transform: uppercase;
-  background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
-  color: #7E7E82;
-  margin-top: 20px;
-  margin-bottom: 0;
-  padding: 16px;
-}
-
-.repair-brands__slider {
+.repair-tech__slider {
   padding: 25px;
 }
 
-.swiper-brands {
+.swiper-tech{
   width: 300px;
-  height: 100px;
-
+  height: 190px;
   @media (min-width: 768px) {
     width: auto;
     height: auto;
@@ -30,8 +15,7 @@
   }
 }
 
-
-.swiper-brands .swiper-wrapper {
+.swiper-tech .swiper-wrapper {
 
   @media (min-width: 768px) {
     display: grid;
@@ -41,7 +25,6 @@
     column-gap: 32px;
     row-gap: 16px;
     max-height: 160px;
-
   }
   @media (min-width: 1120px) {
     display: grid;
@@ -56,30 +39,28 @@
   }
 }
 
-.swiper-wrapper.swiper1.height {
-  @media (min-width: 768px) {
-    max-height: unset;
-  }
-  @media (min-width: 1120px) {
-    max-height: unset;
-  }
-}
-
-.swiper-slide {
-}
-
-.swiper-brand-slide{
+.swiper-tech-slide {
   display: flex;
-  justify-content:space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   background-color: #FFFFFF;
   border-radius: 6px;
   border: 1px solid #EAEAEA;
-  height: 72px;
   padding: 16px;
+
+  height: 150px;
+  color: #1B1C21;
+
+  img {
+    align-self: flex-end;
+  }
+}
+.swiper-pagination2 {
+
 }
 
-.btn-brands {
+.btn-tech {
   margin-top: 24px;
   margin-left:0;
   display: none;
@@ -96,7 +77,7 @@
   }
 }
 
-.btn-brands:before {
+.btn-tech:before {
   content: 'Показать всё';
   position: absolute;
   left: 30px
@@ -108,20 +89,15 @@
   left: 30px
 }
 
-.result{
-  transition-duration: 1.2s;
-}
 .coll .result {
   transform: rotate(-180deg);
 }
 
-
-.swiper-pagination {
-  width: 25px;
-  height: 25px;
-  margin: -15px auto;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #909093;
+.swiper-wrapper.swiper2.height {
+  @media (min-width: 768px) {
+    max-height: unset;
+  }
+  @media (min-width: 1120px) {
+    max-height: unset;
+  }
 }
