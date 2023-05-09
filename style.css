@@ -2087,45 +2087,44 @@ dialog::backdrop {
           backdrop-filter: blur(1px);
 }
 
-.repair-submit {
+.modal-request {
   padding: 20px;
   border: none;
   margin: 0;
   height: 100%;
 }
 @media (min-width: 360px) {
-  .repair-submit {
+  .modal-request {
     margin-left: auto;
     border: 1px solid #D9FFF5;
     padding: 40px 32px;
     overflow: visible;
-    height: 100vh;
   }
 }
 
-.modal-box {
+.modal-request__wrapper {
   box-sizing: border-box;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.modal-box__title-wrapper {
+.modal-request__title-wrapper {
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 1120px) {
-  .modal-box__title-wrapper {
+  .modal-request__title-wrapper {
     flex-direction: row;
   }
 }
 
-#close-modal-btn {
+#modal-request__close-btn {
   position: unset;
   margin-right: auto;
 }
 @media (min-width: 1120px) {
-  #close-modal-btn {
+  #modal-request__close-btn {
     position: absolute;
     left: -75px;
     top: 30px;
@@ -2163,7 +2162,7 @@ dialog::backdrop {
   }
 }
 
-.modal-box .services__title {
+.modal-request__wrapper .services__title {
   margin-left: 0;
   margin-bottom: 24px;
 }
