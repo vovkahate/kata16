@@ -153,7 +153,6 @@
         </div>
     </section>
 
-
     <section class="services-prices" id="prices">
         <h3 class="repair-brands__title">Цены на услуги</h3>
 
@@ -234,7 +233,10 @@
 
         <dialog class="repair-submit">
             <div class="modal-box">
-                <h1 class="services__title">Обратная связь</h1>
+                <div class="modal-box__title-wrapper">
+                    <button id="close-modal-btn"><img src="img/burgerclose.svg"></button>
+                    <h1 class="services__title">Обратная связь</h1>
+                </div>
                 <form name="repair-modal" method="post" action="/">
                     <div class="text-field">
                         <input class="text-field__input" type="text" name="name" id="name" placeholder="Имя" autocomplete="off">
@@ -243,7 +245,9 @@
                         <textarea class="text-field__input" type="text" name="email" id="message" placeholder="Сообщение"></textarea>
                     </div>
                 </form>
-                <button id="close-modal-btn">Close</button>
+                <p class="modal-box_disclaimer">Нажимая "отправить", вы даете согласие на <span class="modal-pink">обработку персональных данных</span> и соглашаетесь с нашей <span class="modal-pink">политикой конфиденциальности</span></p>
+                <button class="swiper-price-slide__btn modal-box__submit-btn">ОТПРАВИТЬ<img src="img/dropdown.svg"></button>
+
             </div>
         </dialog>
 
