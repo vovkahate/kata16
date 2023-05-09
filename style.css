@@ -2187,7 +2187,7 @@ dialog::backdrop {
 .modal-box__submit-btn {
   align-items: center;
   margin-left: auto;
-  margin-top: auto;
+  position: unset;
 }
 
 .wrapper {
