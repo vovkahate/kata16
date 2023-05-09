@@ -25,10 +25,10 @@
                 <button class="actions-profile"><img src="img/profile.svg" alt="Профиль"></button>
             </li>
             <li class="actions-container">
-                <button class="actions-repair"><img src="img/repair.svg" alt="Починить"></button>
+                <button class="actions-repair header__modal-request"><img src="img/repair.svg" alt="Починить"></button>
             </li>
             <li class="actions-container">
-                <button class="actions-check"><img src="img/checkstatus.svg" alt="Найти"></button>
+                <button class="actions-check modal-status"><img src="img/checkstatus.svg" alt="Найти"></button>
             </li>
         </ul>
     </header>
@@ -37,7 +37,7 @@
         <div class="burger-menu__wrapper">
             <div class="burger-menu__header">
                 <button class="burger-menu__burger-btn"><img src="img/burgerclose.svg"></button>
-                <a class="burger-menu__logo" href="#"><img src="img/Group.svg"></a>
+                <a class="burger-menu__logo" href="index.html"><img src="img/Group.svg"></a>
                 <button class="burger-menu__search-btn"><img src="img/search.svg"></button>
             </div>
             <ul class="burger-menu__list">
@@ -77,20 +77,20 @@
         <h1 class="services__title">Услуги и сервисы</h1>
         <ul class="services__actions">
             <li>
-                <button class="actions-repair">Оставить Заявку<img src="img/repair.svg" alt="Починить">
+                <button class="actions-repair title__modal-request">Оставить Заявку<img src="img/repair.svg" alt="Починить">
                 </button>
             </li>
             <li>
-                <button class="actions-search">Статус ремонта<img src="img/checkstatus.svg" alt="Найти">
+                <button class="actions-search modal-status">Статус ремонта<img src="img/checkstatus.svg" alt="Найти">
                 </button>
             </li>
         </ul>
     </div>
 
     <ul class="services__list">
-        <li class="services__list-item"><a class="services__list-link--active" href="#">Ремонтируемые бренды</a></li>
-        <li class="services__list-item"><a class="services__list-link" href="#">Ремонтируемые устройства</a></li>
-        <li class="services__list-item"><a class="services__list-link" href="#">Цены на услуги</a></li>
+        <li class="services__list-item"><a class="services__list-link--active" href="#brands">Ремонтируемые бренды</a></li>
+        <li class="services__list-item"><a class="services__list-link" href="#tech">Ремонтируемые устройства</a></li>
+        <li class="services__list-item"><a class="services__list-link" href="#prices">Цены на услуги</a></li>
         <li class="services__list-item"><a class="services__list-link" href="#">Адреса сервисных центров</a></li>
         <li class="services__list-item"><a class="services__list-link" href="#">Специальные цены</a></li>
         <li class="services__list-item"><a class="services__list-link" href="#">Отзывы</a></li>
@@ -106,7 +106,7 @@
         <img class="main__img--max" src="img/picture520.png">
     </section>
 
-    <section class="repair-brands">
+    <section class="repair-brands" id="brands">
         <h3 class="repair-brands__title">Ремонт техники различных брендов</h3>
 
         <div class="repair-brands__slider">
@@ -130,8 +130,8 @@
 
     </section>
 
-    <section class="repair-tech">
-        <h3 class="repair-brands__title">Ремонт техники различных брендов</h3>
+    <section class="repair-tech" id="tech">
+        <h3 class="repair-brands__title">Ремонт различных видов техники</h3>
 
         <div class="repair-tech__slider">
             <div class="swiper-tech swiper">
@@ -154,7 +154,7 @@
     </section>
 
 
-    <section class="services-prices">
+    <section class="services-prices" id="prices">
         <h3 class="repair-brands__title">Цены на услуги</h3>
 
         <div class="prices__slider">
@@ -230,6 +230,24 @@
             <p class="footer__oferta">Информация, размещенная на данной странице, не является публичной офертой</p>
         </div>
     </section>
+
+
+        <dialog class="repair-submit">
+            <div class="modal-box">
+                <h1 class="services__title">Обратная связь</h1>
+                <form name="repair-modal" method="post" action="/">
+                    <div class="text-field">
+                        <input class="text-field__input" type="text" name="name" id="name" placeholder="Имя" autocomplete="off">
+                        <input class="text-field__input" type="tel" name="phone" id="phone" placeholder="Телефон" autocomplete="on">
+                        <input class="text-field__input" type="email" name="email" id="email" placeholder="Электронная почта" autocomplete="on">
+                        <textarea class="text-field__input" type="text" name="email" id="message" placeholder="Сообщение"></textarea>
+                    </div>
+                </form>
+                <button id="close-modal-btn">Close</button>
+            </div>
+        </dialog>
+
+
 
 </div>
 <script type="text/javascript" src="./js/bundle.js"></script></body>
