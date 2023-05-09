@@ -25,10 +25,10 @@
                 <button class="actions-profile"><img src="img/profile.svg" alt="Профиль"></button>
             </li>
             <li class="actions-container">
-                <button class="actions-repair"><img src="img/repair.svg" alt="Починить"></button>
+                <button class="actions-repair header__modal-request"><img src="img/repair.svg" alt="Починить"></button>
             </li>
             <li class="actions-container">
-                <button class="actions-check"><img src="img/checkstatus.svg" alt="Найти"></button>
+                <button class="actions-check modal-status"><img src="img/checkstatus.svg" alt="Найти"></button>
             </li>
         </ul>
     </header>
@@ -77,11 +77,11 @@
         <h1 class="services__title">Услуги и сервисы</h1>
         <ul class="services__actions">
             <li>
-                <button class="actions-repair">Оставить Заявку<img src="img/repair.svg" alt="Починить">
+                <button class="actions-repair title__modal-request">Оставить Заявку<img src="img/repair.svg" alt="Починить">
                 </button>
             </li>
             <li>
-                <button class="actions-search">Статус ремонта<img src="img/checkstatus.svg" alt="Найти">
+                <button class="actions-search modal-status">Статус ремонта<img src="img/checkstatus.svg" alt="Найти">
                 </button>
             </li>
         </ul>
@@ -230,6 +230,24 @@
             <p class='footer__oferta'>Информация, размещенная на данной странице, не является публичной офертой</p>
         </div>
     </section>
+
+<!--    <section class="modal-submit">-->
+        <dialog class="repair-submit">
+            <div class="modal-box">
+                <h1 class="services__title">Обратная связь</h1>
+                <form name="repair-modal" method="post" action="/">
+                    <div class="text-field">
+                        <input class="text-field__input" type="text" name="name" id="name" placeholder="Имя" autocomplete="off">
+                        <input class="text-field__input" type="tel" name="phone" id="phone" placeholder="Телефон" autocomplete="on">
+                        <input class="text-field__input" type="email" name="email" id="email" placeholder="Электронная почта" autocomplete="on">
+                        <textarea class="text-field__input" type="text" name="email" id="message" placeholder="Сообщение"></textarea>
+                    </div>
+                </form>
+                <button id="close-modal-btn">Close</button>
+            </div>
+        </dialog>
+
+<!--    </section>-->
 
 </div>
 </body>

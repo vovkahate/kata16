@@ -1,0 +1,51 @@
+dialog::backdrop{
+  backdrop-filter: blur(1px);
+
+}
+
+.repair-submit {
+  margin-right: 0;
+  margin-top: 0;
+  width: 440px;
+  height: 100vh;
+  border: 1px solid #D9FFF5;
+  padding: 40px 32px;
+  overflow: visible;
+}
+
+#close-modal-btn {
+  position: absolute;
+  left: -5px;
+}
+
+#repair-submit__input-name {
+  border: 1px solid #bdbdbd;
+  border-radius: 0.25rem;
+}
+
+#repair-submit__input-name::placeholder {
+
+}
+
+.text-field__input {
+  display: block;
+  width: 376px;
+  height: 48px;
+  padding: 0.375rem 0.75rem;
+  font-family: inherit;
+  font-size: 16px;
+  color: #212529;
+  background-color: #fff;
+  border: 1px solid #EAEAEA;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+#message {
+  width: 376px;
+  height: 118px;
+  resize: none;
+}
+.modal-box .services__title {
+  margin-left: 0;
+  margin-bottom: 24px;
+}

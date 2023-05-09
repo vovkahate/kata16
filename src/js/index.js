@@ -137,8 +137,10 @@ btnContent.addEventListener('click', function (){
 
 document.addEventListener('keydown', function(e) {
     if( e.key === "Escape" ){ // код клавиши Escape, но можно использовать e.key
-        // toggleMenu();
-        toggleMenu();
+        if (menuContainer.classList.contains("active")) {
+            toggleMenu();
+        }
+
     }
 });
 
@@ -153,4 +155,35 @@ document.addEventListener("click", function (e) {
         toggleMenu();
     }
 });
+
+const modal = document.querySelector('dialog')
+const modalBox = document.querySelector('.modal-box')
+const showModalBtnHeader = document.querySelector('.header__modal-request')
+const showModalBtnTitle = document.querySelector('.title__modal-request')
+
+const closeModalBtn = document.getElementById('close-modal-btn')
+
+let isModalOpen = false
+
+showModalBtnHeader.addEventListener('click', (e) => {
+    modal.showModal()
+    isModalOpen = true
+    e.stopPropagation()
+})
+
+showModalBtnTitle.addEventListener('click', (e) => {
+    modal.showModal()
+    isModalOpen = true
+    e.stopPropagation()
+})
+closeModalBtn.addEventListener('click', () => {
+    modal.close()
+    isModalOpen = false
+})
+
+document.addEventListener('click', (e) => {
+    if (isModalOpen && !modalBox.contains(e.target)) {
+        modal.close()
+    }
+})
 
