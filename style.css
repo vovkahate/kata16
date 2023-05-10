@@ -2200,7 +2200,7 @@ dialog::backdrop {
 @media (min-width: 360px) {
   #message {
     box-sizing: border-box;
-    width: 100%;
+    max-width: 376px;
     height: 118px;
     resize: none;
   }
@@ -2223,7 +2223,7 @@ dialog::backdrop {
 @media (min-width: 360px) {
   .modal-request__disclaimer {
     display: inline-block;
-    width: 376px;
+    max-width: 376px;
   }
 }
 
