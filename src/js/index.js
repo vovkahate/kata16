@@ -15,7 +15,7 @@ let swiper3;
 
 // Условие для viewport шириной менее 768 пикселей
 const mediaQuery = window.matchMedia('(max-width: 768px)');
-function resolutionWatcher(e) {
+function swiperCreator(e) {
     // Проверить, что media query будет true
     if (e.matches) {
         swiper = new Swiper(".swiper-brands", {
@@ -75,38 +75,38 @@ function resolutionWatcher(e) {
 }
 
 
-mediaQuery.addEventListener('change', resolutionWatcher)
+mediaQuery.addEventListener('change', swiperCreator)
 // Начальная проверка
-resolutionWatcher(mediaQuery);
+swiperCreator(mediaQuery);
 
 
-let heightSlidesContainer = document.querySelector('.swiper1');
-let button = document.querySelector(".btn-brands");
+let heightBrandsContainer = document.querySelector('.swiper1');
+let brandsSliderShowMoreBtn = document.querySelector(".btn-brands");
 
-button.addEventListener("click", (event) => {
-    heightSlidesContainer.classList.toggle('height'); // макс хейт с фикс на авто меню
-    button.classList.toggle('coll'); // доп класс кнопки показать всё
+brandsSliderShowMoreBtn.addEventListener("click", (event) => {
+    heightBrandsContainer.classList.toggle('height'); // макс хейт с фикс на авто меню
+    brandsSliderShowMoreBtn.classList.toggle('coll'); // доп класс кнопки показать всё
 
-    button.scrollIntoView({  // вроде как рабочая фишка подтянуть экран за элеменотм
+    brandsSliderShowMoreBtn.scrollIntoView({  // вроде как рабочая фишка подтянуть экран за элеменотм
         block: 'nearest', // к ближайшей границе экрана
         behavior: 'smooth', // и плавно
     });
 });
 
-let buttonTech = document.querySelector(".btn-tech");
-let heightBrandContainer = document.querySelector('.swiper2');
-buttonTech.addEventListener("click", (event) => {
-    heightBrandContainer.classList.toggle('height'); // макс хейт с фикс на авто меню
-    buttonTech.classList.toggle('coll'); // доп класс кнопки показать всё
+let techSliderShowMoreBtn = document.querySelector(".btn-tech");
+let heightTechContainer = document.querySelector('.swiper2');
+techSliderShowMoreBtn.addEventListener("click", (event) => {
+    heightTechContainer.classList.toggle('height'); // макс хейт с фикс на авто меню
+    techSliderShowMoreBtn.classList.toggle('coll'); // доп класс кнопки показать всё
 
-    buttonTech.scrollIntoView({  // вроде как рабочая фишка подтянуть экран за элеменотм
+    techSliderShowMoreBtn.scrollIntoView({  // вроде как рабочая фишка подтянуть экран за элеменотм
         block: 'nearest', // к ближайшей границе экрана
         behavior: 'smooth', // и плавно
     });
 });
 
-let btnHeader = document.querySelector('.header__burger');
-let btnMenu = document.querySelector('.burger-menu__burger-btn');
+let headerMenuBtn = document.querySelector('.header__burger');
+let asideMenuBtn = document.querySelector('.burger-menu__burger-btn');
 
 let menuContainer = document.querySelector('.burger-menu');
 let body = document.querySelector('body');
@@ -116,9 +116,9 @@ const toggleMenu = function () {
     body.classList.toggle('blur');
     document.body.style.overflow = document.body.style.overflow === 'hidden' ? 'auto' : 'hidden';
 }
-btnHeader.addEventListener('click', toggleMenu)
+headerMenuBtn.addEventListener('click', toggleMenu)
 
-btnMenu.addEventListener('click', toggleMenu)
+asideMenuBtn.addEventListener('click', toggleMenu)
 
 // замутил кнопу читать далее
 let btnContent = document.querySelector('.btn-content');
@@ -140,6 +140,10 @@ document.addEventListener('keydown', function(e) {
         if (menuContainer.classList.contains("active")) {
             toggleMenu();
         }
+        else if (isModalOpen) {
+            document.body.style.overflow = document.body.style.overflow = 'auto';
+            modal.close();
+        }
 
     }
 });
@@ -156,34 +160,72 @@ document.addEventListener("click", function (e) {
     }
 });
 
-const modal = document.querySelector('dialog')
-const modalBox = document.querySelector('.modal-box')
-const showModalBtnHeader = document.querySelector('.header__modal-request')
-const showModalBtnTitle = document.querySelector('.title__modal-request')
+const modal = document.querySelector('.modal-request')
+const modalBox = document.querySelector('.modal-request__wrapper')
 
-const closeModalBtn = document.getElementById('close-modal-btn')
-
+const showModalBtnHeader = document.querySelector('.actions-message') //  кнопка 1й модалки
+// const showModalBtnTitle = document.querySelector('.title__modal-request')   //  кнопка 1й модалки в заголовке
+const closeModalBtn = document.getElementById('modal-request__close-btn')  // кнопка закрытия модалки в модалке
 let isModalOpen = false
 
 showModalBtnHeader.addEventListener('click', (e) => {
     modal.showModal()
+    document.body.style.overflow = document.body.style.overflow = 'hidden';
     isModalOpen = true
     e.stopPropagation()
 })
 
-showModalBtnTitle.addEventListener('click', (e) => {
-    modal.showModal()
-    isModalOpen = true
-    e.stopPropagation()
-})
+// showModalBtnTitle.addEventListener('click', (e) => {
+//     modal.showModal()
+//     document.body.style.overflow = document.body.style.overflow = 'hidden';
+//     isModalOpen = true
+//     e.stopPropagation()
+// })
 closeModalBtn.addEventListener('click', () => {
     modal.close()
+    document.body.style.overflow = document.body.style.overflow = 'auto';
     isModalOpen = false
 })
 
 document.addEventListener('click', (e) => {
     if (isModalOpen && !modalBox.contains(e.target)) {
-        modal.close()
+        document.body.style.overflow = document.body.style.overflow = 'auto';
+        modal.close();
+        isModalOpen = false;
     }
 })
 
+
+
+
+
+
+
+const modalCall = document.querySelector('.modal-call')
+const modalCallBox = document.querySelector('.modal-call__wrapper')
+
+const showModalBtnBurger = document.querySelector('.modal-box-call') //  кнопка звонка в бургере
+const closeModalBtnBurger = document.getElementById('modal-call__close-btn')  // кнопка закрытия модалки в модалке
+let isModalCallOpen = false
+
+showModalBtnBurger.addEventListener('click', (e) => {
+    modalCall.showModal()
+    document.body.style.overflow = document.body.style.overflow = 'hidden';
+    isModalCallOpen = true
+    e.stopPropagation()
+})
+
+closeModalBtnBurger.addEventListener('click', () => {
+    modalCall.close()
+    document.body.style.overflow = document.body.style.overflow = 'auto';
+    isModalCallOpen = false
+})
+
+
+document.addEventListener('click', (e) => {
+    if (isModalCallOpen && !modalCallBox.contains(e.target)) {
+        document.body.style.overflow = document.body.style.overflow = 'auto';
+        modalCall.close();
+        isModalCallOpen = false;
+    }
+})

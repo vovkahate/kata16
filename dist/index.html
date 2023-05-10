@@ -53,9 +53,9 @@
             <div class="burger-menu__footer">
 
                 <ul class="burger-menu__actions-list">
-                    <li class="burger-menu__action"><button class="actions-call"><img src="img/call.svg" alt="Позвонить">
+                    <li class="burger-menu__action modal-box-call"><button class="actions-call"><img src="img/call.svg" alt="Позвонить">
                     </button></li>
-                    <li class="burger-menu__action"><button class="actions-message"><img src="img/chat.svg" alt="Написать">
+                    <li class="burger-menu__action modal-box-request"><button class="actions-message"><img src="img/chat.svg" alt="Написать">
                     </button></li>
                     <li class="burger-menu__action"><button class="actions-profile"><img src="img/profile.svg" alt="Профиль">
                     </button></li>
@@ -77,7 +77,7 @@
         <h1 class="services__title">Услуги и сервисы</h1>
         <ul class="services__actions">
             <li>
-                <button class="actions-repair title__modal-request">Оставить Заявку<img src="img/repair.svg" alt="Починить">
+                <button class="actions-repair">Оставить Заявку<img src="img/repair.svg" alt="Починить">
                 </button>
             </li>
             <li>
@@ -152,7 +152,6 @@
             <button class="btn-tech"><img class="result" src="img/expand.svg"></button>
         </div>
     </section>
-
 
     <section class="services-prices" id="prices">
         <h3 class="repair-brands__title">Цены на услуги</h3>
@@ -232,9 +231,12 @@
     </section>
 
 
-        <dialog class="repair-submit">
-            <div class="modal-box">
-                <h1 class="services__title">Обратная связь</h1>
+    <dialog class="modal-request">
+            <div class="modal-request__wrapper">
+                <div class="modal-request__title-wrapper">
+                    <button id="modal-request__close-btn"><img src="img/burgerclose.svg"></button>
+                    <h1 class="services__title">Обратная связь</h1>
+                </div>
                 <form name="repair-modal" method="post" action="/">
                     <div class="text-field">
                         <input class="text-field__input" type="text" name="name" id="name" placeholder="Имя" autocomplete="off">
@@ -243,13 +245,27 @@
                         <textarea class="text-field__input" type="text" name="email" id="message" placeholder="Сообщение"></textarea>
                     </div>
                 </form>
-                <button id="close-modal-btn">Close</button>
+                <p class="modal-box_disclaimer">Нажимая "отправить", вы даете согласие на <span class="modal-pink">обработку персональных данных</span> и соглашаетесь с нашей <span class="modal-pink">политикой конфиденциальности</span></p>
+                <button class="swiper-price-slide__btn modal-box__submit-btn" type="submit">ОТПРАВИТЬ<img src="img/dropdown.svg"></button>
             </div>
         </dialog>
 
-
+    <dialog class="modal-call">
+        <div class="modal-call__wrapper">
+            <div class="modal-call__title-wrapper">
+                <button id="modal-call__close-btn"><img src="img/burgerclose.svg"></button>
+                <h1 class="services__title">Заказать звонок</h1>
+            </div>
+            <form name="call-modal" method="post" action="/">
+                <div class="text-field">
+                    <input class="text-field__input" type="tel" name="phone" id="call" placeholder="Телефон" autocomplete="on">
+                </div>
+            </form>
+            <p class="modal-box_disclaimer">Нажимая "отправить", вы даете согласие на <span class="modal-pink">обработку персональных данных</span> и соглашаетесь с нашей <span class="modal-pink">политикой конфиденциальности</span></p>
+            <button class="swiper-price-slide__btn modal-call__submit-btn" type="submit">ОТПРАВИТЬ<img src="img/dropdown.svg"></button>
+        </div>
+    </dialog>
 
 </div>
 <script type="text/javascript" src="./js/bundle.js"></script></body>
 </html>
-
