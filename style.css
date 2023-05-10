@@ -944,6 +944,8 @@ template {
   width: 100%;
   position: fixed;
   z-index: 20;
+  height: 100vh;
+  max-height: 100%;
 }
 @media (min-width: 361px) {
   .burger-menu {
@@ -2085,55 +2087,55 @@ input {
 dialog::backdrop {
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
+  background-color: rgba(255, 255, 255, 0.84);
 }
 
-.modal-request {
+.modal-request, .modal-call {
   padding: 20px;
   border: none;
   margin: 0;
-  height: 100%;
+  height: 100vh;
+  max-height: 100%;
 }
 @media (min-width: 360px) {
-  .modal-request {
+  .modal-request, .modal-call {
+    box-sizing: border-box;
+    width: 440px;
     margin-left: auto;
     border: 1px solid #D9FFF5;
     padding: 40px 32px;
     overflow: visible;
+    box-shadow: -38px -20px 13px -26px rgba(34, 60, 80, 0.2);
   }
 }
 
-.modal-request__wrapper {
+.modal-request__wrapper, .modal-call__wrapper {
   box-sizing: border-box;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.modal-request__title-wrapper {
+.modal-request__title-wrapper, .modal-call__title-wrapper {
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 1120px) {
-  .modal-request__title-wrapper {
+  .modal-request__title-wrapper, .modal-call__title-wrapper {
     flex-direction: row;
   }
 }
 
-#modal-request__close-btn {
+#modal-request__close-btn, #modal-call__close-btn {
   position: unset;
   margin-right: auto;
 }
 @media (min-width: 1120px) {
-  #modal-request__close-btn {
+  #modal-request__close-btn, #modal-call__close-btn {
     position: absolute;
     left: -75px;
     top: 30px;
   }
-}
-
-#repair-submit__input-name {
-  border: 1px solid #bdbdbd;
-  border-radius: 0.25rem;
 }
 
 .text-field__input {
@@ -2167,6 +2169,10 @@ dialog::backdrop {
   margin-bottom: 24px;
 }
 
+.modal-call__wrapper .services__title {
+  margin-left: 0;
+}
+
 .text-field {
   display: flex;
   flex-direction: column;
@@ -2183,10 +2189,14 @@ dialog::backdrop {
   color: #FF3E79;
 }
 
-.modal-box__submit-btn {
+.modal-box__submit-btn, .modal-call__submit-btn {
   align-items: center;
   margin-left: auto;
   position: unset;
+}
+
+.modal-call .text-field {
+  margin-top: 24px;
 }
 
 .wrapper {
