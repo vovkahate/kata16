@@ -2140,6 +2140,7 @@ dialog::backdrop {
 }
 @media (min-width: 360px) {
   .modal-request, .modal-call {
+    position: fixed;
     box-sizing: border-box;
     width: 440px;
     margin-left: auto;
