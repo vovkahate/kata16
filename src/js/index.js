@@ -81,7 +81,7 @@ swiperCreator(mediaQuery);
 
 
 let heightBrandsContainer = document.querySelector('.swiper1');
-let brandsSliderShowMoreBtn = document.querySelector(".btn-brands");
+let brandsSliderShowMoreBtn = document.querySelector(".repair-brands__show-more-btn");
 
 brandsSliderShowMoreBtn.addEventListener("click", (event) => {
     heightBrandsContainer.classList.toggle('height'); // макс хейт с фикс на авто меню
@@ -93,7 +93,7 @@ brandsSliderShowMoreBtn.addEventListener("click", (event) => {
     });
 });
 
-let techSliderShowMoreBtn = document.querySelector(".btn-tech");
+let techSliderShowMoreBtn = document.querySelector(".repair-tech__show-more-btn");
 let heightTechContainer = document.querySelector('.swiper2');
 techSliderShowMoreBtn.addEventListener("click", (event) => {
     heightTechContainer.classList.toggle('height'); // макс хейт с фикс на авто меню
@@ -120,8 +120,8 @@ headerMenuBtn.addEventListener('click', toggleMenu)
 
 asideMenuBtn.addEventListener('click', toggleMenu)
 
-// замутил кнопу читать далее
-let btnContent = document.querySelector('.btn-content');
+// замутил кнопу читать далее для контента
+let btnContent = document.querySelector('.content__show-more-btn');
 let textExpand = document.querySelector('.content__text-expand');
 let hiddenText = document.querySelector('.hidden-text');
 btnContent.addEventListener('click', function (){
@@ -134,9 +134,9 @@ btnContent.addEventListener('click', function (){
 // -------------
 
 
-
+// закрываем бургер по ескейп
 document.addEventListener('keydown', function(e) {
-    if( e.key === "Escape" ){ // код клавиши Escape, но можно использовать e.key
+    if( e.key === "Escape" ){
         if (menuContainer.classList.contains("active")) {
             toggleMenu();
         }
@@ -160,6 +160,9 @@ document.addEventListener("click", function (e) {
     }
 });
 
+
+// модалки пошли)
+
 const modal = document.querySelector('.modal-request')
 const modalBox = document.querySelector('.modal-request__wrapper')
 
@@ -168,31 +171,51 @@ const showModalBtnHeader = document.querySelector('.actions-message') //  кно
 const closeModalBtn = document.getElementById('modal-request__close-btn')  // кнопка закрытия модалки в модалке
 let isModalOpen = false
 
+
+
 showModalBtnHeader.addEventListener('click', (e) => {
+    const menu_is_active = menuContainer.classList.contains("active");
     modal.showModal()
-    document.body.style.overflow = document.body.style.overflow = 'hidden';
-    isModalOpen = true
-    e.stopPropagation()
+    if (!menu_is_active) {
+        document.body.style.overflow = document.body.style.overflow = 'hidden';
+        isModalOpen = true
+        e.stopPropagation()
+    }
+    else if (menu_is_active) {
+        isModalOpen = true
+        e.stopPropagation()
+    }
+
 })
 
-// showModalBtnTitle.addEventListener('click', (e) => {
-//     modal.showModal()
-//     document.body.style.overflow = document.body.style.overflow = 'hidden';
-//     isModalOpen = true
-//     e.stopPropagation()
-// })
+
 closeModalBtn.addEventListener('click', () => {
+    const menu_is_active = menuContainer.classList.contains("active");
     modal.close()
-    document.body.style.overflow = document.body.style.overflow = 'auto';
-    isModalOpen = false
+    if (!menu_is_active) {
+        document.body.style.overflow = document.body.style.overflow = 'auto';
+        isModalOpen = false
+    }
+    else if (menu_is_active) {
+        isModalOpen = false
+    }
+
 })
 
 document.addEventListener('click', (e) => {
+    const menu_is_active = menuContainer.classList.contains("active");
     if (isModalOpen && !modalBox.contains(e.target)) {
-        document.body.style.overflow = document.body.style.overflow = 'auto';
-        modal.close();
-        isModalOpen = false;
+        if (!menu_is_active) {
+            document.body.style.overflow = document.body.style.overflow = 'auto';
+            modal.close();
+            isModalOpen = false;
+        }
+        else if (menu_is_active) {
+            modal.close();
+            isModalOpen = false;
+        }
     }
+
 })
 
 
@@ -200,7 +223,7 @@ document.addEventListener('click', (e) => {
 
 
 
-
+//---------- модалка звонок --------
 const modalCall = document.querySelector('.modal-call')
 const modalCallBox = document.querySelector('.modal-call__wrapper')
 
@@ -209,23 +232,44 @@ const closeModalBtnBurger = document.getElementById('modal-call__close-btn')  //
 let isModalCallOpen = false
 
 showModalBtnBurger.addEventListener('click', (e) => {
-    modalCall.showModal()
-    document.body.style.overflow = document.body.style.overflow = 'hidden';
-    isModalCallOpen = true
-    e.stopPropagation()
+    const menu_is_active = menuContainer.classList.contains("active");
+    modalCall.showModal();
+    if (!menu_is_active) {
+        document.body.style.overflow = document.body.style.overflow = 'hidden';
+        isModalCallOpen = true
+        e.stopPropagation()
+    }
+    else if (menu_is_active) {
+        isModalCallOpen = true
+        e.stopPropagation()
+    }
 })
 
 closeModalBtnBurger.addEventListener('click', () => {
+    const menu_is_active = menuContainer.classList.contains("active");
     modalCall.close()
-    document.body.style.overflow = document.body.style.overflow = 'auto';
-    isModalCallOpen = false
+    if (!menu_is_active) {
+        document.body.style.overflow = document.body.style.overflow = 'auto';
+        isModalCallOpen = false
+    }
+    else if (menu_is_active) {
+        isModalCallOpen = false
+    }
+
 })
 
 
 document.addEventListener('click', (e) => {
+    const menu_is_active = menuContainer.classList.contains("active");
     if (isModalCallOpen && !modalCallBox.contains(e.target)) {
-        document.body.style.overflow = document.body.style.overflow = 'auto';
-        modalCall.close();
-        isModalCallOpen = false;
+        if (!menu_is_active) {
+            document.body.style.overflow = document.body.style.overflow = 'auto';
+            modalCall.close();
+            isModalCallOpen = false;
+        }
+        else if (menu_is_active) {
+            modalCall.close();
+            isModalCallOpen = false;
+        }
     }
 })

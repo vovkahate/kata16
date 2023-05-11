@@ -11,11 +11,10 @@ dialog::backdrop{
   max-height: 100%;
 
   @media (min-width: 360px) {
+    position: fixed;
     box-sizing: border-box;
     width: 440px;
-    
     margin-left: auto;
-
     border: 1px solid #D9FFF5;
     padding: 40px 32px;
     overflow: visible;
@@ -74,7 +73,8 @@ dialog::backdrop{
   height: 118px;
   resize: none;
   @media (min-width: 360px) {
-    width: 376px;
+    box-sizing: border-box;
+    max-width: 376px;
     height: 118px;
     resize: none;
   }
@@ -90,16 +90,16 @@ dialog::backdrop{
   //margin-bottom: 24px;
 }
 
-.text-field {
+.form__text-field {
   display: flex;
   flex-direction: column;
 }
 
-.modal-box_disclaimer {
+.modal-request__disclaimer {
 
   @media (min-width: 360px) {
     display: inline-block;
-    width: 376px;
+    max-width: 376px;
   }
 }
 
@@ -107,7 +107,7 @@ dialog::backdrop{
   color: #FF3E79;
 }
 
-.modal-box__submit-btn, .modal-call__submit-btn {
+.modal-request__submit-btn, .modal-call__submit-btn {
   align-items: center;
   margin-left: auto;
   position: unset;
@@ -115,7 +115,7 @@ dialog::backdrop{
 }
 
 .modal-call {
-  .text-field {
+  .form__text-field {
     margin-top: 24px;
   }
 }

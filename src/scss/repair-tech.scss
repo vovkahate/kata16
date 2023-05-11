@@ -5,13 +5,16 @@
 .swiper-tech{
   width: 300px;
   height: 190px;
+  position: relative;
   @media (min-width: 768px) {
     width: auto;
     height: auto;
+    position: unset;
   }
   @media (min-width: 1120px) {
     width: auto;
     height: auto;
+    position: unset;
   }
 }
 
@@ -56,11 +59,9 @@
     align-self: flex-end;
   }
 }
-.swiper-pagination2 {
 
-}
 
-.btn-tech {
+.repair-tech__show-more-btn {
   margin-top: 24px;
   margin-left:0;
   display: none;
@@ -77,8 +78,9 @@
   }
 }
 
-.btn-tech:before {
+.repair-tech__show-more-btn:before {
   content: 'Показать всё';
+  color: #1B1C21;
   position: absolute;
   left: 30px
 }
@@ -86,7 +88,8 @@
 .coll:before {
   content: 'Скрыть';
   position: absolute;
-  left: 30px
+  left: 30px;
+  color: #1B1C21;
 }
 
 .coll .result {
@@ -100,4 +103,15 @@
   @media (min-width: 1120px) {
     max-height: unset;
   }
+}
+
+.swiper-tech:before {
+  content: '';
+  background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+  /*background: linear-gradient(270deg, rgb(255, 255, 255) 19%, rgba(248, 248, 248, 0.0) 100%);*/
+  height: 150px ;
+  width: 40px;
+  position: absolute;
+  right: -2px;
+  z-index: 2;
 }

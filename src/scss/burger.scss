@@ -8,13 +8,12 @@
   width: 100%;
   position: fixed;
   z-index: 20;
-  height: 100vh;
-  max-height: 100%;
+  min-height: 100%;
+
   @media (min-width: 361px) {
     background-color: $header-bg;
     position: fixed;
     width: 320px;
-
     top: 0;
     left: 0;
     bottom: 0;
@@ -46,7 +45,7 @@
   }
 }
 
-//тут был боди перед блур
+
 .blur .burger-menu:after {
 
   @media (min-width: 361px) {
@@ -118,6 +117,7 @@
   margin: 0;
   padding: 0;
 }
+
 .burger-menu__list__item {
   position: relative;
   margin-bottom: 32px;
@@ -217,7 +217,7 @@ input {
 }
 
 
-.burger-menu__logo {
+.header__logo {
   margin-right: auto;
   margin-left: 16px;
 }

@@ -2,7 +2,6 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Проект 1.6</title>
 </head>
@@ -12,7 +11,7 @@
 
     <header class="header">
         <button class="header__burger"><img src="img/burger.svg"></button>
-        <a class="burger-menu__logo" href="#"><img src="img/Group.svg"></a>
+        <a class="header__logo" href="#"><img src="img/Group.svg"></a>
 
         <ul class="header__actions">
             <li class="actions-container">
@@ -25,10 +24,10 @@
                 <button class="actions-profile"><img src="img/profile.svg" alt="Профиль"></button>
             </li>
             <li class="actions-container">
-                <button class="actions-repair header__modal-request"><img src="img/repair.svg" alt="Починить"></button>
+                <button class="actions-repair"><img src="img/repair.svg" alt="Починить"></button>
             </li>
             <li class="actions-container">
-                <button class="actions-check modal-status"><img src="img/checkstatus.svg" alt="Найти"></button>
+                <button class="actions-check"><img src="img/checkstatus.svg" alt="Найти"></button>
             </li>
         </ul>
     </header>
@@ -37,7 +36,7 @@
         <div class="burger-menu__wrapper">
             <div class="burger-menu__header">
                 <button class="burger-menu__burger-btn"><img src="img/burgerclose.svg"></button>
-                <a class="burger-menu__logo" href="index.html"><img src="img/Group.svg"></a>
+                <a class="header__logo" href="index.html"><img src="img/Group.svg"></a>
                 <button class="burger-menu__search-btn"><img src="img/search.svg"></button>
             </div>
             <ul class="burger-menu__list">
@@ -81,7 +80,7 @@
                 </button>
             </li>
             <li>
-                <button class="actions-search modal-status">Статус ремонта<img src="img/checkstatus.svg" alt="Найти">
+                <button class="actions-search">Статус ремонта<img src="img/checkstatus.svg" alt="Найти">
                 </button>
             </li>
         </ul>
@@ -100,13 +99,13 @@
         <div class="content-wrapper">
             <p class="content__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
             <p class="content__text-expand">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера<span class="hidden-text">, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span></p>
-        <button class="btn-content"><img class="result" src="img/expand.svg"></button>
+        <button class="content__show-more-btn"><img class="result" src="img/expand.svg"></button>
         </div>
         <img class="main__img" src="img/picture360.png">
         <img class="main__img--max" src="img/picture520.png">
     </section>
 
-    <section class="repair-brands" id="brands">
+    <section class="repair-brands">
         <h3 class="repair-brands__title">Ремонт техники различных брендов</h3>
 
         <div class="repair-brands__slider">
@@ -125,13 +124,12 @@
                 </div>
                 <div class="swiper-pagination swiper-pagination1"></div>
             </div>
-            <button class="btn-brands"><img class="result" src="img/expand.svg"></button>
+            <button class="repair-brands__show-more-btn"><img class="result" src="img/expand.svg"></button>
         </div>
-
     </section>
 
-    <section class="repair-tech" id="tech">
-        <h3 class="repair-brands__title">Ремонт различных видов техники</h3>
+    <section class="repair-tech">
+        <h3 class="repair-tech__title repair-brands__title">Ремонт различных видов техники</h3>
 
         <div class="repair-tech__slider">
             <div class="swiper-tech swiper">
@@ -149,15 +147,15 @@
                 </div>
                 <div class="swiper-pagination swiper-pagination2"></div>
             </div>
-            <button class="btn-tech"><img class="result" src="img/expand.svg"></button>
+            <button class="repair-tech__show-more-btn"><img class="result" src="img/expand.svg"></button>
         </div>
     </section>
 
-    <section class="services-prices" id="prices">
-        <h3 class="repair-brands__title">Цены на услуги</h3>
+    <section class="services-prices">
+        <h3 class="services-prices__title repair-brands__title">Цены на услуги</h3>
 
-        <div class="prices__slider">
-            <ul class="prices__slider-hidden-title">
+        <div class="services-prices__slider">
+            <ul class="services-prices__slider-hidden-title">
                 <li class="hidden-title__services">Ремонтные услуги</li>
                 <li class="hidden-title__price">Цена</li>
                 <li class="hidden-title__timing">Срок</li>
@@ -223,7 +221,7 @@
     <button class="order__btn">Получить коммерческое предложение<img src="img/line.svg"></button>
     </div>
     <section class="footer">
-        <div class="copyright">
+        <div class="footer__copyright">
             <p class='footer__about'>© 2019 CPS<br>Разработано командой Apesong </p>
             <p class='footer__discalimer'>Политика конфиденциальности</p>
             <p class='footer__oferta'>Информация, размещенная на данной странице, не является публичной офертой</p>
@@ -235,18 +233,18 @@
             <div class="modal-request__wrapper">
                 <div class="modal-request__title-wrapper">
                     <button id="modal-request__close-btn"><img src="img/burgerclose.svg"></button>
-                    <h1 class="services__title">Обратная связь</h1>
+                    <h1 class="modal-request__title services__title">Обратная связь</h1>
                 </div>
-                <form name="repair-modal" method="post" action="/">
-                    <div class="text-field">
+                <form name="modal-request__form" method="post" action="/">
+                    <div class="form__text-field">
                         <input class="text-field__input" type="text" name="name" id="name" placeholder="Имя" autocomplete="off">
                         <input class="text-field__input" type="tel" name="phone" id="phone" placeholder="Телефон" autocomplete="on">
                         <input class="text-field__input" type="email" name="email" id="email" placeholder="Электронная почта" autocomplete="on">
                         <textarea class="text-field__input" type="text" name="email" id="message" placeholder="Сообщение"></textarea>
                     </div>
                 </form>
-                <p class="modal-box_disclaimer">Нажимая "отправить", вы даете согласие на <span class="modal-pink">обработку персональных данных</span> и соглашаетесь с нашей <span class="modal-pink">политикой конфиденциальности</span></p>
-                <button class="swiper-price-slide__btn  modal-box__submit-btn" type="submit">ОТПРАВИТЬ<img src="img/dropdown.svg"></button>
+                <p class="modal-request__disclaimer">Нажимая "отправить", вы даете согласие на <span class="modal-pink">обработку персональных данных</span> и соглашаетесь с нашей <span class="modal-pink">политикой конфиденциальности</span></p>
+                <button class="modal-request__submit-btn swiper-price-slide__btn" type="submit">ОТПРАВИТЬ<img src="img/dropdown.svg"></button>
             </div>
         </dialog>
 
@@ -254,15 +252,15 @@
         <div class="modal-call__wrapper">
             <div class="modal-call__title-wrapper">
                 <button id="modal-call__close-btn"><img src="img/burgerclose.svg"></button>
-                <h1 class="services__title">Заказать звонок</h1>
+                <h1 class="modal-call__title services__title">Заказать звонок</h1>
             </div>
-            <form name="call-modal" method="post" action="/">
-                <div class="text-field">
+            <form name="modal-call__form" method="post" action="/">
+                <div class="form__text-field">
                     <input class="text-field__input" type="tel" name="phone" id="call" placeholder="Телефон" autocomplete="on">
                 </div>
             </form>
-            <p class="modal-box_disclaimer">Нажимая "отправить", вы даете согласие на <span class="modal-pink">обработку персональных данных</span> и соглашаетесь с нашей <span class="modal-pink">политикой конфиденциальности</span></p>
-            <button class="swiper-price-slide__btn  modal-call__submit-btn" type="submit">ОТПРАВИТЬ<img src="img/dropdown.svg"></button>
+            <p class="modal-request__disclaimer">Нажимая "отправить", вы даете согласие на <span class="modal-pink">обработку персональных данных</span> и соглашаетесь с нашей <span class="modal-pink">политикой конфиденциальности</span></p>
+            <button class="modal-call__submit-btn swiper-price-slide__btn" type="submit">ОТПРАВИТЬ<img src="img/dropdown.svg"></button>
         </div>
     </dialog>
 

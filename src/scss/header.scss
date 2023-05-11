@@ -12,7 +12,7 @@
     display: none;
   }
 
-  .burger-menu__logo {
+  .header__logo {
     margin-right: auto;
     margin-left: 16px
   }
@@ -51,11 +51,11 @@
       margin-right: 16px;
     }
 
-    .burger-menu__logo {
+    .header__logo {
       margin-left: 42px;
     }
 
-    .burger-menu__logo::before {
+    .header__logo::before {
       content: "";
       width: 2px;
       height: 32px;
@@ -72,11 +72,11 @@
   @media (min-width: $screen-lg) {
     display: none;
 
-    .burger-menu__logo {
+    .header__logo {
       margin-left: 42px;
     }
 
-    .burger-menu__logo::before {
+    .header__logo::before {
       content: "";
       width: 2px;
       height: 32px;
